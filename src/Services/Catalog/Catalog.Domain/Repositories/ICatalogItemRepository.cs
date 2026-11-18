@@ -2,11 +2,11 @@
 
 public interface ICatalogItemRepository
 {
-    Task<CatalogItem> CreateCatalogItemAsync(CatalogItem item);
-    Task<IEnumerable<CatalogItem>> GetAllCatalogItemsAsync();
-    Task<CatalogItem?> GetCatalogItemAsync(Guid id);
-    Task<IEnumerable<CatalogItem>> GetCatalogItemsByTitleAsync(string title);
-    Task<IEnumerable<CatalogItem>> GetCatalogItemsByBrandAsync(string brandTitle);
-    Task<bool> UpdateCatalogItemAsync(CatalogItem item);
-    Task<bool> DeleteCatalogItemAsync(Guid id);
+    Task<CatalogItem> CreateCatalogItemAsync(CatalogItem item, CancellationToken cancellation);
+    Task<IEnumerable<CatalogItem>> GetAllCatalogItemsAsync(CancellationToken cancellation);
+    Task<CatalogItem?> GetCatalogItemAsync(Guid id, CancellationToken cancellation);
+    Task<IEnumerable<CatalogItem>> GetCatalogItemsByTitleAsync(string title, CancellationToken cancellation);
+    Task<IEnumerable<CatalogItem>> GetCatalogItemsByBrandAsync(string brandTitle, CancellationToken cancellation);
+    Task<bool> UpdateCatalogItemAsync(CatalogItem item, CancellationToken cancellation);
+    Task<bool> DeleteCatalogItemAsync(Guid id, CancellationToken cancellation);
 }
