@@ -1,0 +1,13 @@
+namespace Catalog.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class ApiContoller : ControllerBase
+{
+    private IMediator? mediator;
+
+    protected IMediator Mediator =>
+        mediator ??= HttpContext.RequestServices.GetService<IMediator>() 
+            ?? throw new InvalidOperationException("Служба IMediator не найдена");
+
+}
