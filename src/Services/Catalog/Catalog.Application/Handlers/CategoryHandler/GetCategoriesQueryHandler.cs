@@ -8,5 +8,4 @@ public class GetCategoriesQueryHandler(ICategoryRepository categoryRepository)
         var categoriesList = await categoryRepository.GetAllCategoriesAsync(cancellationToken);
         return new GetCategoriesResult(categoriesList);
     }
-
 }
