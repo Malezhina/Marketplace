@@ -1,7 +1,10 @@
+using Asp.Versioning;
+
 namespace Catalog.API.Controllers;
 
+[ApiVersion("1")]
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
 public class ApiContoller : ControllerBase
 {
     private IMediator? mediator;
