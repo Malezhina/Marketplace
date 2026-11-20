@@ -1,5 +1,11 @@
 // global usings
 
 global using Catalog.Domain.Entities;
+global using Catalog.Domain.Repositories;
+global using MediatR;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
+global using Catalog.Application.Queries.BrandQueries;
+global using Catalog.Application.Responses.BrandResponses;
+global using Catalog.Application.Queries.CategoryQueries;
+global using Catalog.Application.Responses.CategoryResponses;

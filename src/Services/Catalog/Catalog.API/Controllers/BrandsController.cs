@@ -1,5 +1,3 @@
-using System.Net;
-
 namespace Catalog.API.Controllers;
 
 public class BrandsController : ApiContoller

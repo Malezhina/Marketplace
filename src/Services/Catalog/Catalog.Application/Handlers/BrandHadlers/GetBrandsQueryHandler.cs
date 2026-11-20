@@ -1,13 +1,7 @@
-using Catalog.Application.Queries.BrandQueries;
-using Catalog.Application.Responses.BrandResponses;
-using Catalog.Domain.Repositories;
-using MediatR;
-
 namespace Catalog.Application.Handlers.BrandHadlers;
 
-public class GetBrandsQueryHandler(IBrandRepository brandRepository) :
-
-    IRequestHandler<GetBrandsQuery, GetBrandsResult>
+public class GetBrandsQueryHandler(IBrandRepository brandRepository)
+    : IRequestHandler<GetBrandsQuery, GetBrandsResult>
 {
     public async Task<GetBrandsResult> Handle(GetBrandsQuery query, CancellationToken cancellationToken)
     {
