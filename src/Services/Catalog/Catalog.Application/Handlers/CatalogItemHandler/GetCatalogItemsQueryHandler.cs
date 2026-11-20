@@ -8,7 +8,8 @@ public class GetCatalogItemsQueryHandler(ICatalogItemRepository catalogItemRepos
 {
     public async Task<GetCatalogItemsResult> Handle(GetCatalogItemsQuery query, CancellationToken cancellationToken)
     {
-         var catalogItemsList = await catalogItemRepository.GetAllCatalogItemsAsync(cancellationToken);
-        return new GetCatalogItemsResult(catalogItemsList);
+        var catalogItems = await catalogItemRepository.GetAllCatalogItemsAsync(cancellationToken);
+        return new GetCatalogItemsResult(catalogItems);
     }
 }
+ 
